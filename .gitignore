@@ -1,0 +1,14 @@
+
+*.user
+*.suo
+*.testsettings
+*.vsdmi
+_ReSharper.*
+*/obj/*
+*/bin/*
+packages/*/*
+build/*.nupkg
+TestResults/*
+testimpactdata.sdf
+*.vsmdi
+Packages.xml

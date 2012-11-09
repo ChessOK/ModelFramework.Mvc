@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ModelFramework.Mvc</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>odinserj</authors>
+    <owners>Convekta Ltd.</owners>
+    <licenseUrl>https://github.com/ChessOK/ModelFramework.Mvc/raw/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/ChessOK/ModelFramework.Mvc/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright (c) 2012 Convekta Ltd.</copyright>
+  </metadata>
+  <files>
+	<file src="..\content\WebModule.cs.pp" target="content\WebModule.cs.pp" />
+  </files>
+</package>
