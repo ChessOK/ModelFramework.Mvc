@@ -13,9 +13,8 @@ namespace ChessOk.ModelFramework.Web
         public static IEnumerable<AutoloadModule> ScanAssembliesForAutoloadModules()
         {
             return AppDomain.CurrentDomain.GetAssemblies()
-                .ToArray()
+                .Where(x => !x.IsDynamic)
                 .SelectMany(x => x.GetExportedTypes())
-                .ToArray()
                 .Where(x => typeof(AutoloadModule).IsAssignableFrom(x) && !x.IsAbstract)
                 .Select(Activator.CreateInstance)
                 .Cast<AutoloadModule>()
