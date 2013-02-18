@@ -51,7 +51,6 @@ namespace ChessOk.ModelFramework.Web
         protected override void Dispose(bool disposing)
         {
             if (_bus != null) _bus.Dispose();
-            if (_modelContext != null) _modelContext.Dispose();
 
             base.Dispose(disposing);
         }

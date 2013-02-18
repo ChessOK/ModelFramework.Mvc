@@ -1,3 +1,5 @@
+using System;
+
 namespace ChessOk.ModelFramework.Web
 {
     /// <summary>
@@ -7,6 +9,6 @@ namespace ChessOk.ModelFramework.Web
     /// </summary>
     public interface IInitializableForm
     {
-        void InitializeForm(ModelContext context);
+        void InitializeForm(IModelContext context);
     }
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Linq;
-
-using ChessOk.ModelFramework.Expressions;
 
 namespace ChessOk.ModelFramework.Web.ViewModels
 {
     public class ViewModelFactory
     {
-        private readonly ModelContext _context;
+        private readonly IModelContext _context;
 
-        public ViewModelFactory(ModelContext context)
+        public ViewModelFactory(IModelContext context)
         {
             _context = context;
         }

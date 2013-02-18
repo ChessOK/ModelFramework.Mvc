@@ -1,4 +1,4 @@
-﻿using System.Web.Mvc;
+﻿using System;
 
 namespace ChessOk.ModelFramework.Web
 {
@@ -9,6 +9,6 @@ namespace ChessOk.ModelFramework.Web
     /// </summary>
     public interface IInitializableViewModel
     {
-        void Initialize(ModelContext context);
+        void Initialize(IModelContext context);
     }
 }
