@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 
-using Autofac;
 using Autofac.Integration.Mvc;
 
 using ChessOk.ModelFramework.Web;
@@ -13,22 +12,12 @@ namespace ChessOk.ModelFramework.Web
     {
         private static bool _buildWasCalled;
 
-        public static readonly ContainerBuilder Instance = new ContainerBuilder();
-
         public static void Build()
         {
             if (_buildWasCalled) return;
             _buildWasCalled = true;
 
-            var builder = new ContainerBuilder();
-
-            var modules = AutoloadModule.ScanAssembliesForAutoloadModules();
-            foreach (var module in modules)
-            {
-                builder.RegisterModule(module);
-            }
-
-            var container = builder.Build();
+            var container = GlobalLifetimeScope.Instance;
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }
