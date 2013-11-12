@@ -40,11 +40,7 @@ namespace ChessOk.ModelFramework.Web
 
             if (!_modelState.ContainsKey(key))
             {
-                var errorString = String.IsNullOrEmpty(key)
-                    ? message
-                    : String.Format("{0}: {1}", key, message);
-
-                _modelState.AddModelError(String.Empty, errorString);
+                _modelState.AddModelError(String.Empty, message);
             }
             else
             {
