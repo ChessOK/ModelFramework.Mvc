@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autoload\DependencyResolverBuilder.cs" />
+    <Compile Include="Autoload\GlobalLifetimeScope.cs" />
     <Compile Include="ModelController.cs" />
     <Compile Include="ModelStateValidationContext.cs" />
     <Compile Include="MvcModule.cs" />
